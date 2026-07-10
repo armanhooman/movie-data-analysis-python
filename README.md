@@ -78,7 +78,7 @@ Open the notebook inside the `notebook` folder and run all cells.
 * Statistical summary
 * Correlation between numerical features
 * Data visualization using charts
-
+  
 ---
 
 ## 📄 Project Report
