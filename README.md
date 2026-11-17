@@ -1,127 +1,161 @@
 # 🎬 Movie Data Analysis with Python
 
-An exploratory data analysis (EDA) project developed using Python to analyze a movie dataset, discover patterns, and visualize insights through data analysis techniques.
+A Python exploratory data analysis project built around a **synthetic cinema dataset with 10,000 records**. The project covers dataset generation, missing-value handling, descriptive statistics, grouped analysis, and data visualization.
 
-> **Note:** This project was developed for educational purposes using a **fictional (non-real) dataset**. The dataset was created solely to practice data analysis concepts and does not represent real-world movie information.
+> **Dataset note:** The data is synthetic and was created for educational purposes. It does not represent real customers, cinemas, or movie performance.
 
----
+## Project Goals
 
-## 📖 Overview
+- Generate a structured synthetic dataset for analysis
+- Introduce controlled missing values
+- Clean and preprocess the dataset
+- Calculate descriptive statistics
+- Compare groups such as genres and weekday/weekend visits
+- Explore relationships between numerical variables
+- Produce reusable CSV and PNG analysis outputs
 
-The purpose of this project is to practice the complete data analysis process using Python. It covers importing data, cleaning and preparing datasets, performing exploratory data analysis (EDA), and creating visualizations to better understand the data.
+## Technologies
 
----
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- SciPy
 
-## 🎯 Project Objectives
+## Dataset
 
-* Explore and understand the dataset
-* Clean and preprocess the data
-* Perform Exploratory Data Analysis (EDA)
-* Analyze movie ratings and genres
-* Visualize data using charts and graphs
-* Practice working with Python data analysis libraries
+The dataset contains 10,000 cinema-visit records with features such as:
 
----
+- Age
+- Gender
+- Movie genre
+- Ticket price
+- Snacks spending
+- Rating
+- Visit time
+- Weekend indicator
+- Group size
+- Loyalty score
 
-## 🛠️ Technologies Used
+The generator intentionally introduces different missing-value rates across columns so that data-cleaning techniques can be practiced.
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
+## Data Cleaning
 
----
+The analysis script:
 
-## 📊 Analysis Performed
+- Calculates missing-value percentages
+- Drops rows for columns with very low missingness
+- Fills remaining numerical missing values using means
+- Uses genre-based mean imputation for selected financial columns
+- Uses the mode for categorical values
+- Maps numerical genre codes to readable genre names
 
-The project includes:
+## Descriptive Statistics
 
-* Data inspection
-* Data cleaning
-* Handling missing values
-* Descriptive statistics
-* Genre analysis
-* Movie rating analysis
-* Correlation analysis
-* Data visualization
+For numerical columns, the project calculates:
 
----
+- Mean
+- Median
+- Mode
+- Variance
+- Standard deviation
+- Minimum
+- Maximum
+- 25th percentile
+- 75th percentile
 
-## 🚀 Getting Started
+The results are saved to:
 
-### Clone the repository
-
-```bash
-git clone https://github.com/armanhooman/movie-data-analysis.git
+```text
+Descriptive_Statistics.csv
 ```
 
-### Install the required libraries
+## Visualizations
+
+The project generates multiple plots, including:
+
+- Average rating by genre
+- Average snacks spending by genre
+- Average ticket price on weekdays vs weekends
+- Age distribution
+- Loyalty score vs rating
+- Ticket price vs snacks spending
+- Age vs rating
+
+The generated charts are saved as PNG files.
+
+## Project Structure
+
+```text
+movie-data-analysis-python/
+├── main.py
+├── dataset.py
+├── cinema_dataset.csv
+├── Descriptive_Statistics.csv
+├── requirements.txt
+├── data analysis Report.pdf
+├── plot_age_distribution.png
+├── plot_age_vs_rating.png
+├── plot_loyalty_vs_rating.png
+├── plot_rating_by_genre.png
+├── plot_snacks_by_genre.png
+├── plot_ticket_vs_snacks.png
+├── plot_ticket_weekday_vs_weekend.png
+└── README.md
+```
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/armanhooman/movie-data-analysis-python.git
+cd movie-data-analysis-python
+```
+
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Launch Jupyter Notebook
+### 3. Optional: regenerate the synthetic dataset
 
 ```bash
-jupyter notebook
+python dataset.py
 ```
 
-Open the notebook inside the `notebook` folder and run all cells.
+### 4. Run the analysis
 
----
+```bash
+python main.py
+```
 
-## 📈 Key Analyses
+Running the analysis recreates the descriptive-statistics CSV and visualization files.
 
-* Movie rating distribution
-* Genre distribution
-* Statistical summary
-* Correlation between numerical features
-* Data visualization using charts
-  
----
+## Learning Outcomes
 
-## 📄 Project Report
+Through this project I practiced:
 
-A detailed report describing the analysis process and findings is available in the **reports** folder.
+- Synthetic dataset generation
+- Missing-data analysis and imputation
+- Pandas DataFrame operations
+- GroupBy analysis
+- Descriptive statistics
+- NumPy numerical functions
+- Data visualization with Matplotlib
+- Exporting analytical results to files
 
----
+## Report
 
-## 📚 Learning Outcomes
+A PDF report describing the analysis is included in the repository as:
 
-This project helped strengthen practical skills in:
+```text
+data analysis Report.pdf
+```
 
-* Python Programming
-* Data Analysis with Python
-* Data Cleaning and Preprocessing
-* Exploratory Data Analysis (EDA)
-* Data Visualization
-* Working with Pandas, NumPy, and Matplotlib
-* Extracting insights from structured datasets
-
----
-
-## 📌 Dataset
-
-The dataset used in this project is **fictional** and was created **for educational purposes only**.
-
-It was designed to practice:
-
-* Data preprocessing
-* Exploratory data analysis
-* Data visualization
-* Statistical analysis
-
-The dataset should **not** be considered a real-world movie dataset.
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Arman Hooman**
 
-Computer Science Student
-Python Developer | Data Analysis Enthusiast
-
-* GitHub: https://github.com/armanhooman
-* LinkedIn: https://www.linkedin.com/in/arman-hooman-b55053309
+Computer Science student focused on Python, SQL, Data Analysis, and AI Engineering.
